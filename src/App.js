@@ -1,11 +1,14 @@
 import "./App.css";
+import Book from "./components/Book";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<h1 className="text-red-600">Test</h1>
-			</header>
+			<Header />
+			<Main />
+			<Book />
 		</div>
 	);
 }
