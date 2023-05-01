@@ -1,10 +1,12 @@
 import React from "react";
+import books from "../assets/books.png";
 
 const Header = () => {
 	return (
-		<div>
-			<h1 className="text-red-600">Test-Header</h1>
-		</div>
+		<header className="flex flex-row justify-start items-center p-2 md:p-3 text-white">
+			<img src={books} alt="BooksHub" className="w-10 md:w-12 lg:w-14 mr-2" />
+			<span className="text-2xl md:text-3xl lg:text-4xl">BooksHub</span>
+		</header>
 	);
 };
 
