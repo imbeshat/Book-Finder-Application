@@ -5,3 +5,8 @@
 	margin: 0;
 	outline: 0;
 }
+
+.main-content {
+	min-height: 75vh;
+	background: linear-gradient(rgba(4, 11, 60, 0.581), rgba(54, 1, 71, 0.767)), url("./assets/pexels-min-an-694740.jpg") center/cover no-repeat;
+}
