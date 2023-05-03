@@ -1,10 +1,19 @@
 import React from "react";
 
-const BookItem = () => {
+const BookItem = ({ data }) => {
 	return (
-		<div>
-			<h1>BookItem</h1>
-		</div>
+		<>
+			{!data
+				? "Not Found"
+				: data.map((item) => {
+						return (
+							<div key={item.idMeal} className="w-auto rounded-2xl bg-slate-800 p-2">
+								<img src={item.strMealThumb} alt="meal" className="rounded-2xl" />
+								<h3 className="text-white text-lg">{item.strMeal}</h3>
+							</div>
+						);
+				  })}
+		</>
 	);
 };
 
