@@ -4,9 +4,11 @@ import { FaSearch } from "react-icons/fa";
 
 const Book = () => {
 	const [search, setSearch] = useState();
-	const [url, setUrl] = useState("https://www.themealdb.com/api/json/v1/1/search.php?f=c");
+	const [url, setUrl] = useState("");
 	const [show, setShow] = useState(false);
 	const [item, setItem] = useState("");
+
+	const apiKey = "AIzaSyDbXcfTxHeS1qa1g5wYeiRJtZUJ25gErcg";
 
 	useEffect(() => {
 		fetch(url)
@@ -19,7 +21,7 @@ const Book = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`);
+		setUrl(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`);
 	};
 
 	return (
