@@ -14,7 +14,7 @@ const Book = () => {
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => {
-				setItem(data.meals);
+				setItem(data.items);
 				setShow(true);
 			});
 	}, [url]);
