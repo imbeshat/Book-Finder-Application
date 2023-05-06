@@ -21,7 +21,7 @@ const Book = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setUrl(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`);
+		setUrl(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}&maxResults=40`);
 	};
 
 	return (
