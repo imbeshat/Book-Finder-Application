@@ -1,6 +1,7 @@
 import React from "react";
 
 const BookItem = ({ data }) => {
+	console.log(data);
 	return (
 		<>
 			{!data
