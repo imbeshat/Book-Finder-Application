@@ -1,5 +1,6 @@
 import React from "react";
 import altCover from "../assets/default_book_cover_2015.jpg";
+import BookDetails from "./BookDetails";
 
 const BookItem = ({ data }) => {
 	console.log(data);
@@ -16,6 +17,7 @@ const BookItem = ({ data }) => {
 									<img src={altCover} alt="book-cover" className="rounded-2xl" width={128} height={201} />
 								)}
 								<h3 className="text-white text-lg">{item.volumeInfo && item.volumeInfo.title}</h3>
+								<BookDetails data={item} />
 							</div>
 						);
 				  })}
