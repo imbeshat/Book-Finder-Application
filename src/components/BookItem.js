@@ -10,7 +10,7 @@ const BookItem = ({ data }) => {
 				? "Not Found"
 				: data.map((item) => {
 						return (
-							<div key={item.id} className="w-auto rounded-2xl bg-slate-800 p-2">
+							<div key={item.id} className="w-auto rounded-2xl bg-slate-800 p-2 mb-2">
 								{item.volumeInfo && item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.thumbnail ? (
 									<img src={item.volumeInfo.imageLinks.thumbnail} alt="book-cover" className="rounded-2xl" width={128} height={201} />
 								) : (
