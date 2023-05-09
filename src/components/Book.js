@@ -25,12 +25,12 @@ const Book = () => {
 	};
 
 	return (
-		<div className="bg-[#34123e]">
+		<div className="">
 			<form className="flex flex-row items-center justify-evenly py-4 w-[75%] md:w-[500px] mx-auto" onSubmit={handleSubmit}>
 				<input
 					type="search"
 					placeholder="Enter Book to Search"
-					className="w-[75%] md:w-[400px] text-lg rounded-md text-black pl-2"
+					className="w-[75%] md:w-[400px] text-lg rounded-md text-black pl-2 border-2 border-black"
 					onChange={(e) => setSearch(e.target.value)}
 				/>
 				<button type="submit" className="" onClick={handleSubmit}>
