@@ -26,7 +26,7 @@ const Book = () => {
 
 	return (
 		<div className="">
-			<form className="flex flex-row items-center justify-evenly py-4 w-[75%] md:w-[500px] mx-auto" onSubmit={handleSubmit}>
+			<form className="flex flex-row items-center justify-evenly py-8 w-[75%] md:w-[500px] mx-auto" onSubmit={handleSubmit}>
 				<input
 					type="search"
 					placeholder="Enter Book to Search"
