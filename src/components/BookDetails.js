@@ -8,9 +8,9 @@ const BookDetails = ({ data }) => {
 		<>
 			<Popup
 				trigger={
-					<button className="button">
+					<button>
 						{" "}
-						<h6 className="p-1 mt-1 bg-black rounded-lg text-sm">Click for more...</h6>{" "}
+						<h6 className="p-1 mt-1 bg-[#18092c] rounded-lg text-sm text-white">Click for more...</h6>{" "}
 					</button>
 				}
 				modal
