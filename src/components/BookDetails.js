@@ -33,7 +33,7 @@ const BookDetails = ({ data }) => {
 									<img src={altCover} alt="book-cover" className="rounded-2xl" width={128} height={201} />
 								)}
 							</div>
-							<div className="content md:text-[14px] lg:text-[15px]">
+							<div className="content lg:text-[15px]">
 								{""}
 								<h1>Title: {data.volumeInfo.title}</h1>
 								<h3>Author: {data.volumeInfo.authors[0]}</h3>
