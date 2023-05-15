@@ -47,30 +47,30 @@ const BookDetails = ({ data }) => {
 										<p>N/A</p>
 									)}
 								</h3>
-								<p className="flex flex-row">
+								<h3 className="flex flex-row">
 									<span className="pr-1">Language:</span>
 									{data.volumeInfo && data.volumeInfo.language ? <p>{data.volumeInfo.language}</p> : <p>N/A</p>}
-								</p>
-								<p className="flex flex-row">
+								</h3>
+								<h3 className="flex flex-row">
 									<span className="pr-1">Published Date:</span>
 									{data.volumeInfo && data.volumeInfo.publishedDate ? <p>{data.volumeInfo.publishedDate}</p> : <p>N/A</p>}
-								</p>
-								<p className="flex flex-row">
+								</h3>
+								<h3 className="flex flex-row">
 									<span className="pr-1">Average Rating:</span>
 									{data.volumeInfo && data.volumeInfo.averageRating ? <p>{data.volumeInfo.averageRating}</p> : <p>N/A</p>}
-								</p>
-								<p className="flex flex-row">
+								</h3>
+								<h3 className="flex flex-row">
 									<span className="pr-1">Ratings Count:</span>
 									{data.volumeInfo && data.volumeInfo.ratingsCount ? <p>{data.volumeInfo.ratingsCount}</p> : <p>N/A</p>}
-								</p>
-								<p className="flex flex-row">
+								</h3>
+								<h3 className="flex flex-row">
 									<span className="pr-1">Pages:</span>
 									{data.volumeInfo && data.volumeInfo.pageCount ? <p>{data.volumeInfo.pageCount}</p> : <p>N/A</p>}
-								</p>
-								<p className="flex flex-row">
+								</h3>
+								<h3 className="flex flex-row">
 									<span className="pr-1">Maturity Rating:</span>
 									{data.volumeInfo && data.volumeInfo.maturityRating ? <p>{data.volumeInfo.maturityRating}</p> : <p>N/A</p>}
-								</p>
+								</h3>
 							</div>
 						</div>
 						<div className="description md:text-[14px] lg:text-[15px] p-4">
