@@ -3,7 +3,6 @@ import altCover from "../assets/default_book_cover_2015.jpg";
 import BookDetails from "./BookDetails";
 
 const BookItem = ({ data }) => {
-	console.log(data);
 	return (
 		<>
 			{!data
