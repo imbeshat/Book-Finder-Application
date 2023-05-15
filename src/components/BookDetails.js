@@ -35,15 +35,47 @@ const BookDetails = ({ data }) => {
 							</div>
 							<div className="content lg:text-[15px]">
 								{""}
-								<h1>Title: {data.volumeInfo.title}</h1>
-								<h3>Author: {data.volumeInfo.authors[0]}</h3>
-								<p>Language: {data.volumeInfo.language}</p>
-								<p>Published Date: {data.volumeInfo.publishedDate}</p>
-								<p>Average Rating: {data.volumeInfo.averageRating}</p>
-								<p>Ratings Count: {data.volumeInfo.ratingsCount}</p>
-								<p>Pages: {data.volumeInfo.pageCount}</p>
-								<p>Maturity Rating: {data.volumeInfo.maturityRating}</p>
+								<h1 className="flex flex-row">
+									<span className="pr-1">Title:</span>
+									{data.volumeInfo && data.volumeInfo.title ? <p>{data.volumeInfo.title}</p> : <p>N/A</p>}
+								</h1>
+								<h3 className="flex flex-row">
+									<span className="pr-1">Author:</span>
+									{data.volumeInfo && data.volumeInfo.authors && data.volumeInfo.authors.length > 0 ? (
+										<p>{data.volumeInfo.authors[0]}</p>
+									) : (
+										<p>N/A</p>
+									)}
+								</h3>
+								<p className="flex flex-row">
+									<span className="pr-1">Language:</span>
+									{data.volumeInfo && data.volumeInfo.language ? <p>{data.volumeInfo.language}</p> : <p>N/A</p>}
+								</p>
+								<p className="flex flex-row">
+									<span className="pr-1">Published Date:</span>
+									{data.volumeInfo && data.volumeInfo.publishedDate ? <p>{data.volumeInfo.publishedDate}</p> : <p>N/A</p>}
+								</p>
+								<p className="flex flex-row">
+									<span className="pr-1">Average Rating:</span>
+									{data.volumeInfo && data.volumeInfo.averageRating ? <p>{data.volumeInfo.averageRating}</p> : <p>N/A</p>}
+								</p>
+								<p className="flex flex-row">
+									<span className="pr-1">Ratings Count:</span>
+									{data.volumeInfo && data.volumeInfo.ratingsCount ? <p>{data.volumeInfo.ratingsCount}</p> : <p>N/A</p>}
+								</p>
+								<p className="flex flex-row">
+									<span className="pr-1">Pages:</span>
+									{data.volumeInfo && data.volumeInfo.pageCount ? <p>{data.volumeInfo.pageCount}</p> : <p>N/A</p>}
+								</p>
+								<p className="flex flex-row">
+									<span className="pr-1">Maturity Rating:</span>
+									{data.volumeInfo && data.volumeInfo.maturityRating ? <p>{data.volumeInfo.maturityRating}</p> : <p>N/A</p>}
+								</p>
 							</div>
+						</div>
+						<div className="description md:text-[14px] lg:text-[15px] p-4">
+							<h1 className="mb-2 mt-2 text-center">Description</h1>
+							{data.volumeInfo && data.volumeInfo.description ? <p>{data.volumeInfo.description}</p> : <p>Not Available</p>}
 						</div>
 						<div className="actions">
 							<button
