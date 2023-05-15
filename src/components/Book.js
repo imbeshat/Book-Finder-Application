@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BookItem from "./BookItem";
 import { FaSearch } from "react-icons/fa";
+import axios from "axios";
 
 const Book = () => {
 	const [search, setSearch] = useState();
@@ -11,11 +12,15 @@ const Book = () => {
 	const apiKey = "AIzaSyDbXcfTxHeS1qa1g5wYeiRJtZUJ25gErcg";
 
 	useEffect(() => {
-		fetch(url)
-			.then((res) => res.json())
-			.then((data) => {
+		axios
+			.get(url)
+			.then((response) => {
+				const data = response.data;
 				setItem(data.items);
 				setShow(true);
+			})
+			.catch((error) => {
+				console.error("Error fetching data:", error);
 			});
 	}, [url]);
 
